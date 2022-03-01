@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+
+*{
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  margin:0;
+  padding: 0;
+  background: var(--backgrond);
+  padding-bottom: 0.1rem;
+  
+}
+
+body {
+  background: no-repeat url(../IMG/blur-1.png) -30rem 0/cover,no-repeat url(../IMG/blur-2.png) 55rem 0/ cover;
+  padding-top: 3.12rem;
+overflow: hidden;
+}
+
+/*MENU*/
+
+header {
+  width: 60vw;
+  height: 3.12;
+  display: flex;
+  margin-bottom: 15rem;
+}
+header li{
+  list-style: none;
+}
+
+#logo{
+  width: 3vw;
+}
+#logo img{
+  width: 43px;
+  height: 50px;}
+  
+#NavMenu{display:flex;}
+
+#NavMenu li{
+  width: auto;
+  margin: 0;
+}
+
+#NavMenu li a{
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color);
+  font-family: Manrope, 'sans-serif';
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+#NavMenu li a:hover{
+  border-bottom:2px solid var(--button) ;
+}
+
+#NavMenu li{
+  margin-left:2rem;
+}
+
+#getMyCoffe a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color);
+  font-family: Manrope, 'sans-serif';
+  font-weight: 500;
+  border: 1px solid var(--button);
+  border-radius: 6px;
+  padding: 1rem 4rem;
+  transition: 1s;
+}
+
+#getMyCoffe a:hover{background: var(--button);}
+
+/*MOBILE*/
+#navMenuMobile{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--backgrond);
+  transform: translateX(110%);
+  transition: transform 1s ease-in-out;
+}
+
+#navMenuMobile nav li a{
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color-menu-mobile);
+  font-family: Manrope, 'sans-serif';
+  font-weight: 500;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-menu-mobile);
+}
+
+#aTop{  border-top: 1px solid var(--border-menu-mobile);
+}
+
+#navMenuMobile nav li a:hover{border-left: 5px solid var(--button) ;}
+
+@media screen and (min-width:1200px) and (max-width:1450px) {
+  #NavMenu li a,  #getMyCoffe a{font-size: 14px;}
+  header{width: 80vw;}
+}
+
+@media screen and (min-width:1000px) and (max-width:1200px) {
+  #NavMenu li a,  #getMyCoffe a{font-size: 12px;}
+  header{width: 80vw;}
+}
+
+@media screen and (max-width:1000px) {
+  #NavMenu li a,  #getMyCoffe a{font-size: 12px;}
+  header{width: 100vw;}
+}
+
+@media screen and (max-width:620px) {
+  #Menu,  #getMyCoffe, #logo {display: none;}
+  header{
+    position: fixed;
+    margin-bottom: 2rem;
+    z-index: 1;
+    background: var(--backgrond);
+    top: 0;
+    padding-top: 2rem;
+    padding-bottom:1rem ;
+
+    
+  }
+
+  body {
+    background: no-repeat url(../IMG/blur-mobile.png) bottom center/cover;
+
+  }
+}
+
+@media screen and (min-width:621px) {
+  #logoMobile, #burguerMobile, #navMenuMobile{display: none;}
+  
+}
+
+h1{
+  font-size: 80px;
+  font-family: Manrope,'sans-serif';
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+#nextLevel{margin: 30% 2rem 5rem 2rem;
+font-size: 30px;
+}
+
+#getMyCoffe2{ margin-bottom: 4rem;}
+#getMyCoffe2 a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color);
+  font-family: Manrope, 'sans-serif';
+  font-weight: 500;
+  border: 1px solid var(--button);
+  border-radius: 6px;
+  padding: 1rem 4rem;
+  transition: 1s;
+ 
+}
+
+#getMyCoffe2 a:hover{background: var(--button);}
+
+@media screen and (max-width:620px) {
+h1{font-size: 50px;}
+
+}
+
+
+@media screen and (min-width:620px) {
+  #getMyCoffe2, #nextLevel{display: none;}
+  
+  }
+  
+
+#great{
+  color: #000;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);}
+
+
+#coffee{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+#coffee img{
+  display: block;
+  width: 50%;
+}
+
+@media screen and (max-width:1450px) {
+
+  #coffee img{
+    position: relative;
+    width: 100%;
+    z-index: -1;
+  }
+  
+}
